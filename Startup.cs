@@ -26,7 +26,7 @@ namespace IndyBooks
             services.AddDbContext<Models.IndyBooksDataContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("IndyBooks-Win-SqlServer"));
-                //options.UseSqlite(Configuration.GetConnectionString("IndyBooks-Mac-Sqlite"));
+                options.UseSqlite(Configuration.GetConnectionString("IndyBooks-Mac-Sqlite"));
             });
         }
 
